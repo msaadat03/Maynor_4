@@ -1,0 +1,26 @@
+{% extends 'layout.html' %}
+
+{% block title %}orm_abc_app:result{% endblock %}
+
+{% block content %}
+    <h5>orm_abc_app:result</h5>
+    <h6>{{ task_formulation }}</h6>
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th scope="col">Year</th>
+            <th scope="col">Високосный</th>
+	    <th scope="col">Век</th>
+        </tr>
+        </thead>
+        <tbody style="border-top: 0px;">
+        <tr>
+            {% for item in last_data %}
+                <td>{{ item }}</td>
+            {% endfor %}
+            <td>{{ leap }}</td>
+	    <td>{{ century }}</td>
+        </tr>
+        </tbody>
+    </table>
+{% endblock %}
